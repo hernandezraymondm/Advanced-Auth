@@ -1,8 +1,9 @@
-### **Advanced Authentication:**
+# Advanced Authentication:
 
-2-Factor Authentication, Email Verification, Cookies, Sessions, and JWT
+**2-Factor Authentication, Email Verification, Cookies, Sessions, and JWT**
 
-**Tech Stack:**
+## Tech Stack:
+
 MERN (MongoDB, Express.js, React.js, Node.js)
 
 Tailwind CSS
