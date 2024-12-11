@@ -1,10 +1,12 @@
 import "dotenv/config";
 import cors from "cors";
-import express, { Request, Response } from "express";
+import express, { NextFunction, Request, Response } from "express";
 import cookieParser from "cookie-parser";
 import { config } from "./config/app.config";
 import connectDatabase from "./database/modules/database";
 import { errorHandler } from "./middlewares/errorHandler";
+import { HTTPSTATUS } from "./config/http.config";
+import { asyncHandler } from "./middlewares/asyncHandler";
 
 const app = express();
 const BASE_PATH = config.BASE_PATH;
@@ -20,11 +22,14 @@ app.use(
 
 app.use(cookieParser());
 
-app.get("/", (req: Request, res: Response) => {
-  res.status(200).json({
-    message: "Hello and Welcome to Advance Auth API!!!",
-  });
-});
+app.get(
+  "/",
+  asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
+    res.status(HTTPSTATUS.OK).json({
+      message: "Hello and Welcome to Advance Auth API!!!",
+    });
+  })
+);
 
 app.use(errorHandler);
 
