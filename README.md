@@ -8,7 +8,7 @@ MERN (MongoDB, Express.js, React.js, Node.js)
 
 Tailwind CSS
 
-DaisyUI
+Shadcn/ui
 
 # Install Backend Project Dependencies
 
