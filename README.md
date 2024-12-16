@@ -1,4 +1,4 @@
-# Advanced Authentication:
+# Advanced Authentication
 
 **2-Factor Authentication, Email Verification, Cookies, Sessions, and JWT**
 
